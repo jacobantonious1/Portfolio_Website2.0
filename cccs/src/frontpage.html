@@ -19,13 +19,13 @@
                  <a href = "#about" onclick = "scrollIntoView(document.querySelector('#about'))"><h3>About</h3></a>
             </div>
             <div>
-                <a href = "#work" onclick = "scrollIntoView(document.querySelector('#about'))"><h3>Work</h3></a>
+                <a href = "#work" onclick = "scrollIntoView(document.querySelector('#work'))"><h3>Experience</h3></a>
+            </div>
+            <div>
+                <a href = "#tech" onclick = "scrollIntoView(document.querySelector('#tech'))"><h3>Tech-Stack</h3></a>
             </div>
             <div>
                 <a href = "#services" onclick = "scrollIntoView(document.querySelector('#services'))"><h3>Project</h3></a>
-            </div>
-            <div>
-                <a href = "#extracurriculars" onclick = "scrollIntoView(document.querySelector('#services'))"><h3>Extracurriculars</h3></a>
             </div>
         </div>
         <div class = "page">
@@ -44,13 +44,13 @@
 
             <div class = "work" id = "work">
                 <div class = "work_header">
-                    <h2>Work</h2>
+                    <h2>Experience</h2>
                 </div>
             </div>
 
-            <div class = "extracurriculars" id = "extracurriculars">
+            <div class = "tech" id = "tech">
                 <div class = "ex_header">
-                    <h2>Extracurriculars</h2>
+                    <h2>Tech Stack</h2>
                 </div>
             </div>
 
@@ -60,34 +60,56 @@
                 </div>
                 
                 <div class = "packages">
-
-                    <div class = "card right">
-                        <div class = "header">
-                            <h4>Spotify Recommended App</h4>
-                        </div>
-                        
-                        <div class = "description">
-                            - diedjiejdiej idjeidjejd diejdijeidj idejidjeisdedj jedujeudjeudjeu jeu jdeujd
-                            <br>
-                            <br>
-                            - diedjiejdiej idjeidjejd diejdijeidj idejidjeisdedj jedujeudjeudjeu jeu jdeujd
-                            <br>
+                    <!-- spotify card -->
+                    <div class="card-container right">
+                        <div class="card">
+                            <div class="front">
+                                <div class="header">
+                                    <h4>Spotify Recommended App</h4>
+                                </div>
+                                <div class="description">
+                                    - diedjiejdiej idjeidjejd diejdijeidj idejidjeisdedj jedujeudjeudjeu jeu jdeujd
+                                    <br><br>
+                                    - diedjiejdiej idjeidjejd diejdijeidj idejidjeisdedj jedujeudjeudjeu jeu jdeujd
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="header">
+                                    <h4>More Details</h4>
+                                </div>
+                                <div class="description">
+                                    - Additional information about the app.
+                                    <br><br>
+                                    - Features, benefits, or other details can go here.
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class = "card right ">
-                        <div class = "header">
-                            <h4>Automated Cat Feeder</h4>
+                    <!-- end of spotify card -->
+                     
+                    <div class="card-container right">
+                        <div class="card">
+                            <div class="front">
+                                <div class="header">
+                                    <h4>Automatic Cat Feeder</h4>
+                                </div>
+                                <div class="description">
+                                    - diedjiejdiej idjeidjejd diejdijeidj idejidjeisdedj jedujeudjeudjeu jeu jdeujd
+                                    <br><br>
+                                    - diedjiejdiej idjeidjejd diejdijeidj idejidjeisdedj jedujeudjeudjeu jeu jdeujd
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="header">
+                                    <h4>More Details</h4>
+                                </div>
+                                <div class="description">
+                                    - Additional information about the app.
+                                    <br><br>
+                                    - Features, benefits, or other details can go here.
+                                </div>
+                            </div>
                         </div>
-
-                        <div class = "description">
-                            - diedjiejdiej idjeidjejd diejdijeidj idejidjeisdedj jedujeudjeudjeu jeu jdeujd
-                            <br>
-                            <br>
-                            - diedjiejdiej idjeidjejd diejdijeidj idejidjeisdedj jedujeudjeudjeu jeu jdeujd
-                            <br>
-                        </div>
-                        
                     </div>
 
                     <div class = "card right">
@@ -137,3 +159,11 @@
         </div>
     </body>
 </html>
+
+<script>
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('flipped');
+        });
+    });
+</script>
